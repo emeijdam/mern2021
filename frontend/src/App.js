@@ -34,7 +34,7 @@ const App = () => {
                                 <ul>
                                     <li>
                                         <h1>
-                                            <a href="/{data.id}">{data._id}</a>
+                                            <a href="/{data.id}">{data.name}</a>
                                         </h1>
                                     </li>
                                     <li>
@@ -68,6 +68,14 @@ const App = () => {
                     <div>
                         <button type="submit">Add Anime</button>
                     </div>
+                </form>
+            </div>
+            <div>
+            <h2>With <code>"express"</code> npm package</h2>
+                <form action="http://localhost:8080/api/upload" enctype="multipart/form-data" method="post">
+                <div>Text field title: <input type="text" name="title" /></div>
+                <div>File: <input type="file" name="someExpressFiles" multiple="multiple" /></div>
+                <input type="submit" value="Upload" />
                 </form>
             </div>
         </Fragment>
